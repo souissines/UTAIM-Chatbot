@@ -1,0 +1,41 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Salut", "Comment allez-vous", "Est-ce qu'il y a quelqu'un ?", "Bonjour"],
+         "responses": ["Bonjour, merci de votre visite ", "Content de vous revoir", "Salut, comment puis-je vous aider","Bienvenue dans notre association UTAIM EL JEM"],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["Au revoir", "A plus tard"],
+         "responses": ["A plus tard, merci de votre visite", "Bonne journée", "Bye! Revenez bientôt."]
+        },
+        {"tag": "thanks",
+         "patterns": ["Merci", "C'est utile"],
+         "responses": ["Heureux de vous aider !", "À tout moment !", "Mon plaisir"]
+        },
+        {"tag": "hours",
+         "patterns": ["Quelles sont vos heures d'ouverture ?", "Quand êtes-vous ouvert ?" ,""],
+         "responses": ["Nous sommes ouverts du lundi au vendredi de 8h à 13h", "Nos horaires sont de 8h à 13h du lundi au vendredi",
+                "Du lundi au jeudi premier cours 8:00 ---- 11:00 Engagement"
+                                                       ]
+        },
+        {"tag": "Holidays ",
+         "patterns": ["Quels sont les dates de vacances ? ", "Quand sera les vacances ?","Quand sera les  Fêtes? "],
+         "responses": ["on a les vacances d 'hiver,printemps et d'étè","on a les vacances en Decembre,Mars et du juin jusqu'à Septembtre","on a les Fêtes religieuses, annuelles"]
+        },
+        
+        {"tag": "opentoday",
+         "patterns": ["Are you open today?", "When do you open today?", "What are your hours today?"],
+         "responses": ["We're open every day from 9am-9pm", "Our hours are 9am-9pm every day"]
+        },
+        {"tag": "rental",
+         "patterns": ["Can we rent a moped?", "I'd like to rent a moped", "How does this work?" ],
+         "responses": ["Are you looking to rent today or later this week?"],
+         "context_set": "rentalday"
+        },
+        {"tag": "today",
+         "patterns": ["today"],
+         "responses": ["For rentals today please call 1-800-MYMOPED", "Same-day rentals please call 1-800-MYMOPED"],
+         "context_filter": "rentalday"
+        }
+   ]
+}
